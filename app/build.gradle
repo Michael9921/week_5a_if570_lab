@@ -2,10 +2,13 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
 }
-
 android {
     namespace 'id.ac.umn.tiptime'
     compileSdk 33
+
+    buildFeatures{
+        viewBinding= true
+    }
 
     defaultConfig {
         applicationId "id.ac.umn.tiptime"
@@ -13,10 +16,8 @@ android {
         targetSdk 33
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
     buildTypes {
         release {
             minifyEnabled false
@@ -31,9 +32,7 @@ android {
         jvmTarget = '1.8'
     }
 }
-
 dependencies {
-
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
